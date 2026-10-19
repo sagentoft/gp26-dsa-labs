@@ -43,7 +43,7 @@ namespace DSA.Lab00
             Player highestScore = _players[0];
             for (int i = 0; i < _players.Count; i++)
             {
-                if (_players[i].Score > highestScore)
+                if (_players[i].Score > highestScore.Score)
                 {
                     highestScore = _players[i];
                 }
@@ -59,9 +59,13 @@ namespace DSA.Lab00
             // Use case-sensitive comparison for this lab.
 
             foreach (Player player in _players)
-            {  
-                
+            {
+                if (string.Equals(player.Name, name, StringComparison.Ordinal))
+                {
+                    return true;
+                }
             }
+            
             return false;
         }
     }
