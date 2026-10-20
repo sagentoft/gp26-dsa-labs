@@ -41,7 +41,7 @@ namespace DSA.Lab00
             }
 
             Player highestScore = _players[0];
-            for (int i = 0; i < _players.Count; i++)
+            for (int i = 1; i < _players.Count; i++)
             {
                 if (_players[i].Score > highestScore.Score)
                 {

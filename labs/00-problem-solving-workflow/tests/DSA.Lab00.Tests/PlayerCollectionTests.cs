@@ -69,6 +69,16 @@ public sealed class PlayerCollectionTests
         Assert.That(contains, Is.False);
     }
 
+    [Test]
+    public void ContainsName_IsCaseSensitive()
+    {
+        PlayerCollection collection = CreateCollection();
+        
+        bool contains = collection.ContainsName("bo");
+        
+        Assert.That(contains, Is.False);
+    }
+
     private static PlayerCollection CreateCollection()
     {
         return new PlayerCollection(new List<Player>
