@@ -11,7 +11,7 @@ Use it for your own:
 
 You do not need to keep formal notes unless a lab specifically asks you to.
 
-Lab 0:
+# Lab 0:
 
 1. Which of the three operations may need to inspect every player?
     FindHighestsScore has to loop through every element in the list to get the highest score. The others may loop through through 
