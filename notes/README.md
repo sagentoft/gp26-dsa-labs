@@ -55,4 +55,10 @@ Task 1
 6. If the array becomes twice as large, what happens to the worst-case amount of work?
     It also becomes twice as large. The method is O(n) time complexity.
 
+Task 2
+
+Binary search only works with ordered data because it relies on the order of the values
+ to determine which half of the data to discard. Without ordered data, there would be no
+ way to guarantee that the target wasn't in the discarded half.
+
 

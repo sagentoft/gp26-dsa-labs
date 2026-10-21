@@ -75,6 +75,16 @@ namespace DSA.Lab01.Tests
 
             Assert.That(result, Is.EqualTo(-1));
         }
+
+        [Test]
+        public void BinarySearch_FindsElementInSingleElementArray()
+        {
+            int[] values = { 32 };
+            
+            int result = SearchAlgorithms.BinarySearch(values, 32);
+            
+            Assert.That(result, Is.EqualTo(0));
+        }
     }
 
     [TestFixture]
