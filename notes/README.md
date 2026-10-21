@@ -11,7 +11,7 @@ Use it for your own:
 
 You do not need to keep formal notes unless a lab specifically asks you to.
 
-Lab 1:
+Lab 0:
 
 1. Which of the three operations may need to inspect every player?
     FindHighestsScore has to loop through every element in the list to get the highest score. The others may loop through through 
@@ -31,3 +31,28 @@ Lab 1:
 5. At what point did you make a Git commit? What made that a sensible checkpoint?
     After every step. So after implementing each function, and then after writing and running the new test.
     And I will commit after this, too.
+
+# Lab 1:
+
+Task 1
+
+1. What does i represent?
+    i represents the current index that is being compared to target.
+
+2. When does the method stop early?
+    When it finds a value at an index that matches the target.
+
+3. What does -1 mean?
+    That it didn't find a value matching the target.
+
+4. What is the best case?
+    That it finds a value matching target on index 0.
+
+5. What is the worst case?
+    That it iterates over the whole collection without finding the target or finding the target
+    at the very last index.
+
+6. If the array becomes twice as large, what happens to the worst-case amount of work?
+    It also becomes twice as large. The method is O(n) time complexity.
+
+
