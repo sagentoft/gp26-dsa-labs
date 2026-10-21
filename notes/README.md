@@ -62,3 +62,31 @@ Binary search only works with ordered data because it relies on the order of the
  way to guarantee that the target wasn't in the discarded half.
 
 
+Task 5
+
+Input size	Linear search	Binary search	What changed?
+10,000		6.45 µs	        0.10 µs         Baseline
+100,000		33.71 µs        0.12 µs	        Linear search took 5.2 times longer while binary took 20% longer
+1,000,000	342.70 µs		0.20 µs         Linear search took more than 10 times longer while binary search took 66.66...%
+
+Linear search - O(n): Worst-case outcome is examining every element.
+Binary search - O(log n): Worst-case outcome comes out to about 20 comparisons
+
+Task 6
+
+1. why array indexing is treated as O(1)?
+    Elements are stored in contiguous memory, so the address of an element can be calculated directly
+    using its index. It essentially means that accessing an element takes constant time, regardless
+    of array size.
+
+2. why linear search is O(n) in the worst case?
+    As a worst-case, linear search must examine every element in the array before finding the target,
+    or determining it doesn't exist. Therefore, the amount of work grows linearly with the number of elements.
+
+3. why binary search is O(log n)?
+    Binary search eliminates half the remaining search space with each iteration. Because the number of elements
+    is repeatedly halves, the number of iterations grows logarithmically with array size.
+
+4. why this insertion-sort implementation is O(n²) in the worst case?
+    In the worst case, when the array is sorted in reverse order, each element must be compared with and shifted past all other elements. Since the number of comparisons and and moves increases every iteration of tthe outer loop, the total
+    amount of work grows quadratically with the array's size.
