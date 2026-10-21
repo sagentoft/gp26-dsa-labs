@@ -18,7 +18,18 @@ namespace DSA.Lab01
             // 1. Store the value you want to insert.
             // 2. Shift larger values one position to the right.
             // 3. Put the stored value into the gap.
-            
+            for (int i = 1; i < values.Length; i++)
+            {
+                int valueToInsert = values[i];
+                int j = i - 1;
+                while (j >= 0 && values[j] > valueToInsert)
+                {
+                    values[j + 1] = values[j];
+                    j--;
+                }
+                
+                values[j + 1] = valueToInsert;
+            }
         }
     }
 }
