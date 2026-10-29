@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyModel;
 using NUnit.Framework;
 
 namespace DSA.Lab03.Tests
@@ -33,6 +34,16 @@ namespace DSA.Lab03.Tests
             Assert.That(a, Is.EqualTo("A"));
             Assert.That(b, Is.EqualTo("B"));
             Assert.That(c, Is.EqualTo("C"));
+        }
+
+        [Test]
+        public void HashTable_SetDoesNotChangeSize()
+        {
+            var table = new IntHashTable<string>(5);
+            table.Set(1, "A"); table.Set(6, "B"); table.Set(11, "C");
+            Assert.That(table.Count, Is.EqualTo(3));
+            table.Set(1, "D");
+            Assert.That(table.Count, Is.EqualTo(3));
         }
 
         [Test]

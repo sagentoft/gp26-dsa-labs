@@ -90,3 +90,44 @@ Task 6
 4. why this insertion-sort implementation is O(n²) in the worst case?
     In the worst case, when the array is sorted in reverse order, each element must be compared with and shifted past all other elements. Since the number of comparisons and and moves increases every iteration of tthe outer loop, the total
     amount of work grows quadratically with the array's size.
+
+# Lab 3
+
+Task 1
+
+1. What is the worst case when the key is missing?
+    We iterate through the entire list without finding the key, then make a new entry.
+
+2. What changes when the collection grows from 100 entries to 100,000?
+    The number of operations increases by up to 100,000. O(n)
+
+3. What operation are we trying to improve?
+    We are trying to improve the efficiency of looking up a key, ideally without
+    having to iterate over the entire list. Perhaps a dictionary might be a solution.
+
+Task 2
+
+The supplied hash table uses positive integer keys and:
+
+bucketIndex = key % bucketCount;
+With five buckets, calculate the bucket for:
+
+101, 205, 734, 206, 999
+Which keys collide?
+
+Given bucketIndex = key % bucketCount where bucketCount = 5.
+Bucket 0: 205
+Bucket 1: 101, 206
+Bucket 4: 734, 999
+
+Task 4
+
+1. Why can keys 1 and 6 both exist when the table has five buckets?
+    Because 1 % 5 and 6 % 5 both equal 1. And because hash tables support
+    collisions, they an both exist in the same bucket.
+2. What happens to lookup cost if almost every key ends up in the same bucket?
+    As the number if keys in a bucket increases, the lookup cost increases linearly.
+    Approaching O(n)
+3. Why does expected O(1) lookup not mean "exactly one CPU operation"?
+   O(1) describes how the amount of work scales with the number of entries,
+   not how many CPU operations are performed.
