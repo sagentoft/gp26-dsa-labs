@@ -37,11 +37,12 @@ namespace DSA.Lab03.Tests
         }
 
         [Test]
-        public void HashTable_SetDoesNotChangeSize()
+        public void HashTable_ChangingValueDoesNotChangeSize()
         {
             var table = new IntHashTable<string>(5);
             table.Set(1, "A"); table.Set(6, "B"); table.Set(11, "C");
             Assert.That(table.Count, Is.EqualTo(3));
+            
             table.Set(1, "D");
             Assert.That(table.Count, Is.EqualTo(3));
         }
